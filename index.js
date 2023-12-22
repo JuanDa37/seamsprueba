@@ -15,7 +15,7 @@ import myConnection from 'express-myconnection';
 
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 dotenv.config();
 
@@ -27,8 +27,8 @@ app.use(morgan('dev'));
 const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-    res.send('index.html', {
-        root: 'public'
+    res.sendFile('index.html', {
+        root: path.join(__dirname, 'public')
     });
 });
 
