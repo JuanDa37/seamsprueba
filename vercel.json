@@ -5,10 +5,6 @@
             "use": "@vercel/node"
         }
     ],
-    "static": {
-        "source": "public",
-        "destination": "/public"
-      },
     "routes": [
         {
             "src": "/(.*)",
