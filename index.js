@@ -27,6 +27,20 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/tienda", (res, req) => {
+    req.sendFile("tienda.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//servicios
+
+app.get("/servicios", (res, req) => {
+    req.sendFile("servicios.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
 app.get("/hola", (req, res) => {
     const htmlResponse = `
     <html>
