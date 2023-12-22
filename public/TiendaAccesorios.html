@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Accesorios</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+
+  <link rel="shortcut icon" href="img/lgo.jpg" type="image/x-icon">
+
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <!--Box icons-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <!--Nav-->
+        <div class="nav container nav-bar">
+            <!--Logo-->
+            <i class='bx bx-menu sidebarOpen'></i>
+            <div class="logos">
+            <a href="/" class="logo navLogo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+            <div>
+                <p class="titulo">SEA & SEAMS</p>
+                <p class="slogan">Headway Clothing</p>
+            </div>
+            </div>
+            <div class="menu">
+                <div class="logo-togle">
+                    <a href="/" class="logo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+                    <div>
+                        <p class="titulo">SEA & SEAMS</p>
+                        <p class="slogan">Headway Clothing</p>
+                    </div>
+                    <i class='bx bx-x sidebarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Inicio</a></li>
+                        <li class="submenu">
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                                <ul class="sub-menu dropdown-menu">
+                                    <li><a href="/TiendaVestidos" class="dropdown-item">Vestidos</a></li>
+                                    <li><a href="/TiendaCamisas" class="dropdown-item">Camisas</a></li>
+                                    <li><a href="/TiendaZapatos" class="dropdown-item">Zapatos</a></li>
+                                                <li><a href="/tienda" class="dropdown-item">Conjuntos</a></li>
+                                                <li><a href="/TiendaAccesorios" class="dropdown-item">Accesorios</a></li>
+                                </ul>
+                            </div>
+                        </li></li>
+                    <li><a href="/Quienes-Somos">Nosotros</a></li>
+                    <li class="submenu">
+                        <div class="dropdown">
+                            <a href="servicios.html" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                            <ul class="sub-menu dropdown-menu">
+                                <li><a href="/servicios" class="dropdown-item">Vender</a></li>
+                                <li><a href="/servicios" class="dropdown-item">Comprar</a></li>
+                                <li><a href="/servicios" class="dropdown-item">Cambiar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="https://api.whatsapp.com/send?phone=573185258389&text=Hola%20solicito%20programar%20una%20cita">Agendar Cita</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <!--<div class="darkLight">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>-->
+                <div class="searchBox">
+                    <div class="searchTogle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+
+                        <div class="search-field">
+                            <input type="text" placeholder="...Search" autofocus id="searchInput">
+                            <i class='bx bx-search' id="searchButton" type="button"></i>
+                        </div>
+                    </div>
+                        
+                </div>
+                <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            </div>
+            <!--Cart Icon-->
+            <div class="cart">
+                <h2 class="cart-title">Your cart</h2>
+                <!--Content-->
+                <div class="cart-content cart-content-scroll">
+                </div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">0$</div>
+                </div>
+                <!--Buy button-->
+                <button type="button" class="btn-button">Buy now</button>
+                <!--Close cart-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <!--Products-->
+    <section class="shop container">
+        <div class="central">
+            <h2 class="section-title">Accesorios</h2>
+            
+            <div class="sortOrdenar">
+                <label for="sortPrice">Ordenar por precio:</label>
+                <select id="sortPrice" onchange="sortProducts()">
+                    <option value="none">Ninguno</option>
+                    <option value="desc">Mayor a menor</option>
+                    <option value="asc">Menor a mayor</option>
+                </select>
+            </div>
+            
+            <!--Shop Content-->
+            <div class="shop-content">
+                <!--Box 2-->
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9OY-Bhto03iYUR2vaZXYnPNKEdjPnzalQwt7RUVG7k3nLhcXxueY7b0EPh2i5JljiOjq4QxvcCdBDJufXpP8MsgWcpsVUUwCQFPezEjca2_JU2So8CHhgFsQ_vg9hC7Hi_MjiWHZxwilReOmqfnThYE1RytCV5lVxfWFf01vysflysrN1kmA0wK3RCdpQ/s320/WhatsApp%20Image%202023-09-23%20at%209.53.47%20PM%20(1).jpeg" alt="" class="product-img">
+                    <h2 class="product-title">Bolsa de Compras</h2>
+                    <span class="price">$40000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 3-->
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMWJxHfYmbKJ3FAUHGdeCRU6XBXvE1LlomOzDPulWs3F05TJJ4ZhntmRHr2b1MKuCw2M66JopevmMcYBUPupFpClTaD1MPBGN7dMCKjrkFjjnOeQxJKFLLUloffmQKiffU8q8BCmPSy_8WMIJ9igiHSoWw9-Jkyy7aG6jyeZ48Xqk0VinZlVskAju49T-T/s320/WhatsApp%20Image%202023-09-23%20at%209.53.47%20PM.jpeg" alt="" class="product-img">
+                    <h2 class="product-title">Cartera rectangular</h2>
+                    <span class="price">$40000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 4-->
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-ZCy__iMV7fqwY9HLoo4zkXQK4mb9qRMsPNP7bM9mYEB0Ik2OPtk2NLYas8hnyRjQG9YcJE0HoURzg9GA9OrAGt6sH0-jLtGKCI_pjrwOiwetIbkI-A7pZ6fWkcCskJ1ennkwpoyjXMJ5AzuNaICz4DIqjVSPh8G-fjcghQkv2P10magXrd9WimvdogRQ/s320/WhatsApp%20Image%202023-09-23%20at%209.53.46%20PM.jpeg" alt="" class="product-img">
+                    <h2 class="product-title">Bolso marrón</h2>
+                    <span class="price">$20000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 4-->
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqbIP7_SvNrLPZ0YoXK-e0Vj55_gI1zO4Zte0LOKdH20EE1JQDdYu94L_rLTY4tzXeYvZU1WEByfs5RD9yHYXMD_cB_2SjHfY_0jhBesFUY6-Z7r40G8aJ6hfUULxYo3kuUCCFrBmyCKJafn5qS-a2kymFDN01JSoFiQfNuAaxgS1Ldq9OHxcSWuE7UCr7/s320/WhatsApp%20Image%202023-09-23%20at%209.53.45%20PM%20(2).jpeg" alt="" class="product-img">
+                    <h2 class="product-title">Bolso ancestral</h2>
+                    <span class="price">$80000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 4-->
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEje3lexZOKnK9qEeKVdYM4i1Fz-qfW5qoq0esHRXdoySrWN8q6wWEMt0FfEEqmu4nKYJxe2uXJzCH4TSKLP5H7OqiF-ozSdvMv76_SoVlD0i53CQPTUu7NWhSPMFMHcI9BVF60BOkrFFbFLp4b_pPH3GN58AJDhdyAQQvLBBlGSEpBDS4ZxHrvoS__PGPlG/s320/WhatsApp%20Image%202023-09-23%20at%209.53.46%20PM%20(1).jpeg" alt="" class="product-img">
+                    <h2 class="product-title">Mochila púrpura</h2>
+                    <span class="price">$60000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 4-->                
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVhw4WWqIurO_TTnmB_5L38yJEyzyvN8DSb837FBpfkZU8A8XAEj994eVp458V0Aj8Mu6Zr8JcN25CCWWPWdnwvN_Y_8c6Bfcpv_4mhrJSO3HK4IhKek4g6iibUKutwloPCe1AtUnhKUhtF0m1JguByZK9ccyO9UckFkOJV__QWPkNi1ORlACRE58eCG8l/s320/WhatsApp%20Image%202023-09-23%20at%209.53.45%20PM.jpeg" alt="" class="product-img">
+                    <h2 class="product-title">Reloj de pulso negro</h2>
+                    <span class="price">$60000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 4-->                
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4IOkYSHuHHC_bSr_uwj-iJeaBuP5GJaGmHfzSBdmnWaz07oLgWx05Cei22s9GIgX3QKuUOpZzvDBIs6Ggpjuqp3j8m8Lhsxl_a9LukvMBK9VepRiCUlVy3Ci1_5PoxCplQpdObM3fvFBjmBUKcLv4dCZaLybV_dEmdaPWpwMcY1A1Z5tRKaVi2a0isp9T/s320/WhatsApp%20Image%202023-09-23%20at%209.53.44%20PM%20(2).jpeg" alt="" class="product-img">
+                    <h2 class="product-title">Reloj de pulso</h2>
+                    <span class="price">$40000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 4-->                
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjU0zXzcU_OZy7A1-lOnLnvbnCi3S9z639BxqZhy4dT50Ow7q9uD-dgbcdYLZ8bQADQqxizPIQmK5DrCLCP4Dd0zYcx77ahHV5mX3d0fm9s-fKPpxWnfUUjjOvmB8a4p3v6YCMcaZBY4bBKP0EeUIIYP3ZfVkYQaznRFhY0J1F8kREj1IriBBsaJk87TWUl/s320/WhatsApp%20Image%202023-09-23%20at%209.53.45%20PM%20(1).jpeg" alt="" class="product-img">
+                    <h2 class="product-title">Bolso de cuero marrón</h2>
+                    <span class="price">$40000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="final">
+            <div class="container">
+                <div class="row elemento">  
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <p class="titulo">Visita nuestras redes sociales</p>
+                        <div class="redes">
+                            <a href="https://www.facebook.com/profile.php?id=100083532272187">
+                                <i class='bx bxl-facebook' ></i>
+                            </a>
+                            <p>Sea & Seams</p>
+                        </div>
+                        <div class="redes">
+                            <a href="https://www.instagram.com/seaams/">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                            <p>Sea & Seams</p>
+                        </div>
+                        <div class="redes">
+                            <a href="https://www.youtube.com/channel/UC0WSKg812tMljiGuQqHdwzA?view_as=subscriber">
+                                <i class='bx bxl-youtube'></i>
+                            </a>
+                            <p>Sea & Seams</p>
+                        </div>
+                        <div class="redes">
+                            <a href="">
+                                <i class='bx bxl-whatsapp'></i>
+                            </a>
+                            <p>318 3168 27293</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 col-md-3 col-xl-3">
+                        <p class="titulo">Políticas</p>
+                        <a href="/Politica-De-Privacidad"><p>Política de privacidad</p></a>
+                        <a href="/Politica-De-Envios"><p>Política de envios</p></a>
+                        <a href="/Politica-De-Devoluciones"><p>Política de devolución</p></a>
+                        <a href="/Politica-De-Garantia"><p>Política de garantia</p></a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <p class="titulo">Horario de atención</p>
+                        <p>Ciita previa al teléfono</p>
+                        <p>(+57) 318 525 8389</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <p class="titulo">Dirección</p>
+                        <p>Cra. 17 B1 # 57 - 70</p>
+                        <p>Puerta del sol, Bucaramanga Santander</p>
+                    </div>
+                </div>
+                <div class="row indicador">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <hr>
+                        <p>@Copyright sea-seams. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/carro.js"></script>
+
+    <script src="js/tienda.js"></script>
+    <script src="js/tienda.js"></script>
+    <script src="js/cart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

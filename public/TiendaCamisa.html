@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Camisas</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+
+  <link rel="shortcut icon" href="img/lgo.jpg" type="image/x-icon">
+
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/EspecificacionesProductos.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <!--Box icons-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <!--Nav-->
+        <div class="nav container nav-bar">
+            <!--Logo-->
+            <i class='bx bx-menu sidebarOpen'></i>
+            <div class="logos">
+            <a href="/" class="logo navLogo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+            <div>
+                <p class="titulo">SEA & SEAMS</p>
+                <p class="slogan">Headway Clothing</p>
+            </div>
+            </div>
+            <div class="menu">
+                <div class="logo-togle">
+                    <a href="/" class="logo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+                    <div>
+                        <p class="titulo">SEA & SEAMS</p>
+                        <p class="slogan">Headway Clothing</p>
+                    </div>
+                    <i class='bx bx-x sidebarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Inicio</a></li>
+                        <li class="submenu">
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                                <ul class="sub-menu dropdown-menu">
+                                    <li><a href="/TiendaVestidos" class="dropdown-item">Vestidos</a></li>
+                                    <li><a href="/TiendaCamisas" class="dropdown-item">Camisas</a></li>
+                                    <li><a href="/TiendaZapatos" class="dropdown-item">Zapatos</a></li>
+                                                <li><a href="/tienda" class="dropdown-item">Conjuntos</a></li>
+                                                <li><a href="/TiendaAccesorios" class="dropdown-item">Accesorios</a></li>
+                                </ul>
+                            </div>
+                        </li></li>
+                    <li><a href="/Quienes-Somos">Nosotros</a></li>
+                    <li class="submenu">
+                        <div class="dropdown">
+                            <a href="servicios.html" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                            <ul class="sub-menu dropdown-menu">
+                                <li><a href="/servicios" class="dropdown-item">Vender</a></li>
+                                <li><a href="/servicios" class="dropdown-item">Comprar</a></li>
+                                <li><a href="/servicios" class="dropdown-item">Cambiar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="https://api.whatsapp.com/send?phone=573185258389&text=Hola%20solicito%20programar%20una%20citas">Agendar Cita</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <!--<div class="darkLight">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>-->
+                <div class="searchBox">
+                    <div class="searchTogle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+
+                        <div class="search-field">
+                            <input type="text" placeholder="...Search" autofocus id="searchInput">
+                            <i class='bx bx-search' id="searchButton" type="button"></i>
+                        </div>
+                    </div>
+                        
+                </div>
+                <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            </div>
+            <!--Cart Icon-->
+            <div class="cart">
+                <h2 class="cart-title">Your cart</h2>
+                <!--Content-->
+                <div class="cart-content cart-content-scroll">
+                </div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">0$</div>
+                </div>
+                <!--Buy button-->
+                <button type="button" class="btn-button">Buy now</button>
+                <!--Close cart-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <!--Products-->
+    <section class="shop container">
+        <div class="central">
+            <h2 class="section-title">Blusas y Camisas</h2>
+            
+            <div class="sortOrdenar">
+                <label for="sortPrice">Ordenar por precio:</label>
+                <select id="sortPrice" onchange="sortProducts()">
+                    <option value="none">Ninguno</option>
+                    <option value="desc">Mayor a menor</option>
+                    <option value="asc">Menor a mayor</option>
+                </select>
+            </div>
+            
+            <!--Shop Content-->
+            <div class="shop-content">
+                <!--Box 1-->
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <a href="#camisa1">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjut1I-4hoElUPJ6G5SOF7qX8UD6TKR0oNAQ9UTG1hpJ4XWnm6kUqdvpDkV-C5Le0SRecrqy4-M8Xg9GFeGO9c5Up-dwVfKyz2MaZSrkGXNxQMPakZEj2UaObG99vaCKeDqvzi0J5umoSlrsUHlQ3cXysM0g9s3wGunnS7jX4S3x6Y6xzgfd7EsO-MoCvm6/s320/WhatsApp%20Image%202023-09-23%20at%209.53.38%20PM.jpeg" alt="" class="product-img">
+                    </a>
+                    <h2 class="product-title">Blusa dorada</h2>
+                    <span class="price">$40000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 2-->
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <a href="#camisa2">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaXbnpa6qbLGwM5rrFRsRjJDUHo-IvH9wC9GQnZakUmnkrqEDdyLkx7fV-nvnk29nZpvJHSRLLbCgkHBI1JyYeZ5TBl6F6P2IBjO6lg24VCJLjO4oTvN7cbr1TcbTaMEve0Ccv82UwZIjnWTAy7S5ZF_p0MwlBwVTA1jn3aFFpGz8HamhsRl83iLAFlwSZ/s320/WhatsApp%20Image%202023-09-23%20at%209.53.37%20PM.jpeg" alt="" class="product-img">
+                    </a>
+                    <h2 class="product-title">Camiseta de Colombia roja</h2>
+                    <span class="price">$30000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 3-->
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <a href="#camisa3">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR-YwFY84qFPEcaNaPbUWhaX_wbYiPNYQLkW0sE6nNK9c2ShcGBl3T-BBSahXLdf7MCmoqJlztHGUllRwzOc9xtl7u-eKYwV0o08o8gv0wxeayhW2uoKpGxlkE96JOvACikdIl5isgUDUF8iOx1qsUh4fmK60gJM9TWMJx7hsxV9KZylg06Kr5YEHVO4Xf/s320/WhatsApp%20Image%202023-09-23%20at%209.53.34%20PM.jpeg" alt="" class="product-img">
+                    </a>
+                    <h2 class="product-title">Blusa Elegante rosada</h2>
+                    <span class="price">$20000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 4-->
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <a href="#camisa4">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7ZA4cT6Pl0eo5mZkfUwELtdv-SGxJxjqjVHKI-L1gqebG3nA-r4OvGItnMR27KgqhOX27sOoy4viGzZBNeWmRUGQiCzdAr_l3DScW9qu6NqtRd38f928h8__gEsSKOjD_VOC5f9RO99MaK5bujjk19AhW3cO51FowFiSC8UqcKmo29NVD1jQBik2ZG8Lw/s320/WhatsApp%20Image%202023-09-23%20at%209.53.37%20PM%20(1).jpeg" alt="" class="product-img">
+                    </a>
+                    <h2 class="product-title">Polo Lila</h2>
+                    <span class="price">$70000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 5-->
+                <div class="product-box">
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <a href="#camisa5">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhylts7SGhfaeJyQwhRusJtKY-WmVfFObQVFAteHBoYbpKQg1AwI_dc8nlixQcNXfVXdVXY2XO9LugnCvOMWWPklPgiMr3_duDGl2o_VdDg-AMkfkjl3AukbAoIEFJqo89J_DarNFBXyLeK6pV0sr8IT02lpQQYNi5JatW38OVhyphenhyphenV_vGiXqXqOdUn07i0NT/s320/WhatsApp%20Image%202023-09-23%20at%209.53.37%20PM%20(2).jpeg" alt="" class="product-img">
+                    </a>
+                    <h2 class="product-title">Polo rosita</h2>
+                    <span class="price">$70000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 6-->
+                <div class="product-box">
+                    <a href="#camisa6">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgcPkge4gw0fkTqhaD-5xLE5VkIM131fVGd51VdTSyhCxDp5slttFhvdY-6CnH4ckt9Z8i1pn4AKuwCrCeTwOG-Mx7XMiNUGbhv4cdD8p1_sLMFAsU0E-1bk2PUIhgpQfcEsM87vOQHOe3Gnh1xfQVj6g_ZYqJFd_HJIIHx69BU-_fef0_FhfgmIjUeclF/s320/WhatsApp%20Image%202023-09-23%20at%209.53.37%20PM%20(3).jpeg" alt="" class="product-img">
+                    </a>
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <h2 class="product-title">Polo negro</h2>
+                    <span class="price">$50000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                <!--Box 7-->
+                <div class="product-box">
+                    <a href="#camisa7">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNE8fCm9Kh9XjryjcwugNwgUarcrS6T9Yop4l45TUfQrNxcn0sZOyqYm7pyrgUCPqycgicXhW3q8NmDS9SLIqlB1AAxEutXtoyrch8SNpvxVkd3fDNl0BtuPsXFZ5SX2bHHl3cnGy5Vu02PXoYtUX0_1oVcfebjj-u3xAJ54Akjw8VbmYPvBmyvw5FyTnD/s320/WhatsApp%20Image%202023-09-23%20at%209.53.35%20PM.jpeg" alt="" class="product-img">
+                    </a>
+                    <!--Stripe needs images that are online on a local server; it will not show in Stripe checkout, so we have to upload online-->
+                    <h2 class="product-title">Blusa Escotada de Trigresa</h2>
+                    <span class="price">$80000</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <article class="lightbox" id="camisa1">
+        <a class="cerrar2" href="#">Cerrar</a>
+        <div class="container">
+            <div class="central-detalles row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjut1I-4hoElUPJ6G5SOF7qX8UD6TKR0oNAQ9UTG1hpJ4XWnm6kUqdvpDkV-C5Le0SRecrqy4-M8Xg9GFeGO9c5Up-dwVfKyz2MaZSrkGXNxQMPakZEj2UaObG99vaCKeDqvzi0J5umoSlrsUHlQ3cXysM0g9s3wGunnS7jX4S3x6Y6xzgfd7EsO-MoCvm6/s320/WhatsApp%20Image%202023-09-23%20at%209.53.38%20PM.jpeg" alt="" class="product-img">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div id="container2" class="container2">
+                        <nav class="menu2">
+                        <ul>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Color</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Azúl Oscuro</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Talla</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>XL</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Medidas</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Acerca de este producto</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Marca</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="lightbox" id="camisa2">
+        <a class="cerrar2" href="#">Cerrar</a>
+        <div class="container">
+            <div class="central-detalles row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaXbnpa6qbLGwM5rrFRsRjJDUHo-IvH9wC9GQnZakUmnkrqEDdyLkx7fV-nvnk29nZpvJHSRLLbCgkHBI1JyYeZ5TBl6F6P2IBjO6lg24VCJLjO4oTvN7cbr1TcbTaMEve0Ccv82UwZIjnWTAy7S5ZF_p0MwlBwVTA1jn3aFFpGz8HamhsRl83iLAFlwSZ/s320/WhatsApp%20Image%202023-09-23%20at%209.53.37%20PM.jpeg" alt="" class="product-img">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div id="container3" class="container2">
+                        <nav class="menu2">
+                        <ul>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Color</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Azúl Oscuro</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Talla</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>XL</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Medidas</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Acerca de este producto</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Marca</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="lightbox" id="camisa3">
+        <a class="cerrar2" href="#">Cerrar</a>
+        <div class="container">
+            <div class="central-detalles row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR-YwFY84qFPEcaNaPbUWhaX_wbYiPNYQLkW0sE6nNK9c2ShcGBl3T-BBSahXLdf7MCmoqJlztHGUllRwzOc9xtl7u-eKYwV0o08o8gv0wxeayhW2uoKpGxlkE96JOvACikdIl5isgUDUF8iOx1qsUh4fmK60gJM9TWMJx7hsxV9KZylg06Kr5YEHVO4Xf/s320/WhatsApp%20Image%202023-09-23%20at%209.53.34%20PM.jpeg" alt="" class="product-img">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div id="container4" class="container2">
+                        <nav class="menu2">
+                        <ul>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Color</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Azúl Oscuro</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Talla</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>XL</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Medidas</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Acerca de este producto</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Marca</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="lightbox" id="camisa4">
+        <a class="cerrar2" href="#">Cerrar</a>
+        <div class="container">
+            <div class="central-detalles row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7ZA4cT6Pl0eo5mZkfUwELtdv-SGxJxjqjVHKI-L1gqebG3nA-r4OvGItnMR27KgqhOX27sOoy4viGzZBNeWmRUGQiCzdAr_l3DScW9qu6NqtRd38f928h8__gEsSKOjD_VOC5f9RO99MaK5bujjk19AhW3cO51FowFiSC8UqcKmo29NVD1jQBik2ZG8Lw/s320/WhatsApp%20Image%202023-09-23%20at%209.53.37%20PM%20(1).jpeg" alt="" class="product-img">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div id="container5" class="container2">
+                        <nav class="menu2">
+                        <ul>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Color</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Azúl Oscuro</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Talla</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>XL</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Medidas</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Acerca de este producto</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Marca</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="lightbox" id="camisa5">
+        <a class="cerrar2" href="#">Cerrar</a>
+        <div class="container">
+            <div class="central-detalles row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhylts7SGhfaeJyQwhRusJtKY-WmVfFObQVFAteHBoYbpKQg1AwI_dc8nlixQcNXfVXdVXY2XO9LugnCvOMWWPklPgiMr3_duDGl2o_VdDg-AMkfkjl3AukbAoIEFJqo89J_DarNFBXyLeK6pV0sr8IT02lpQQYNi5JatW38OVhyphenhyphenV_vGiXqXqOdUn07i0NT/s320/WhatsApp%20Image%202023-09-23%20at%209.53.37%20PM%20(2).jpeg" alt="" class="product-img">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div id="container6" class="container2">
+                        <nav class="menu2">
+                        <ul>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Color</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Azúl Oscuro</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Talla</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>XL</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Medidas</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Acerca de este producto</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Marca</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="lightbox" id="camisa6">
+        <a class="cerrar2" href="#">Cerrar</a>
+        <div class="container">
+            <div class="central-detalles row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhylts7SGhfaeJyQwhRusJtKY-WmVfFObQVFAteHBoYbpKQg1AwI_dc8nlixQcNXfVXdVXY2XO9LugnCvOMWWPklPgiMr3_duDGl2o_VdDg-AMkfkjl3AukbAoIEFJqo89J_DarNFBXyLeK6pV0sr8IT02lpQQYNi5JatW38OVhyphenhyphenV_vGiXqXqOdUn07i0NT/s320/WhatsApp%20Image%202023-09-23%20at%209.53.37%20PM%20(2).jpeg" alt="" class="product-img">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div id="container7" class="container2">
+                        <nav class="menu2">
+                        <ul>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Color</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Azúl Oscuro</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Talla</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>XL</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Medidas</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Acerca de este producto</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Marca</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="lightbox" id="camisa7">
+        <a class="cerrar2" href="#">Cerrar</a>
+        <div class="container">
+            <div class="central-detalles row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNE8fCm9Kh9XjryjcwugNwgUarcrS6T9Yop4l45TUfQrNxcn0sZOyqYm7pyrgUCPqycgicXhW3q8NmDS9SLIqlB1AAxEutXtoyrch8SNpvxVkd3fDNl0BtuPsXFZ5SX2bHHl3cnGy5Vu02PXoYtUX0_1oVcfebjj-u3xAJ54Akjw8VbmYPvBmyvw5FyTnD/s320/WhatsApp%20Image%202023-09-23%20at%209.53.35%20PM.jpeg" alt="" class="product-img">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div id="container8" class="container2">
+                        <nav class="menu2">
+                        <ul>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Color</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Azúl Oscuro</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Talla</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>XL</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Medidas</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Acerca de este producto</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                            <li class="list">
+                                <div class="item2">
+                                    <a href="#"><i></i>Marca</a>
+                                    <i class='bx bx-chevron-up icon' ></i>
+                                </div>
+                                <p>Sin información</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="final">
+            <div class="container">
+                <div class="row elemento">  
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <p class="titulo">Visita nuestras redes sociales</p>
+                        <div class="redes">
+                            <a href="https://www.facebook.com/profile.php?id=100083532272187">
+                                <i class='bx bxl-facebook' ></i>
+                            </a>
+                            <p>Sea & Seams</p>
+                        </div>
+                        <div class="redes">
+                            <a href="https://www.instagram.com/seaams/">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                            <p>Sea & Seams</p>
+                        </div>
+                        <div class="redes">
+                            <a href="https://www.youtube.com/channel/UC0WSKg812tMljiGuQqHdwzA?view_as=subscriber">
+                                <i class='bx bxl-youtube'></i>
+                            </a>
+                            <p>Sea & Seams</p>
+                        </div>
+                        <div class="redes">
+                            <a href="">
+                                <i class='bx bxl-whatsapp'></i>
+                            </a>
+                            <p>318 3168 27293</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 col-md-3 col-xl-3">
+                        <p class="titulo">Políticas</p>
+                        <a href="/Politica-De-Privacidad"><p>Política de privacidad</p></a>
+                        <a href="/Politica-De-Envios"><p>Política de envios</p></a>
+                        <a href="/Politica-De-Devoluciones"><p>Política de devolución</p></a>
+                        <a href="/Politica-De-Garantia"><p>Política de garantia</p></a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <p class="titulo">Horario de atención</p>
+                        <p>Ciita previa al teléfono</p>
+                        <p>(+57) 318 525 8389</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <p class="titulo">Dirección</p>
+                        <p>Cra. 17 B1 # 57 - 70</p>
+                        <p>Puerta del sol, Bucaramanga Santander</p>
+                    </div>
+                </div>
+                <div class="row indicador">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <hr>
+                        <p>@Copyright sea-seams. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/carro.js"></script>
+
+    <script src="js/tienda.js"></script>
+    <script src="js/tienda.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/TiendaCamisa.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

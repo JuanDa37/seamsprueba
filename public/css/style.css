@@ -1,0 +1,295 @@
+.product-box{
+    text-align: center;
+}
+
+.product-img{
+    margin: 0;
+}
+/*h2{
+    color: #000000;
+}*/
+.section-title{
+    color: #000000;
+}
+.carousel {
+    width: 100%;
+}
+
+.carousel-inner {
+    border-radius: 10px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.carusel i{
+    z-index: 50;
+    color: #000000;
+    font-size: 26px;
+    margin: 0;
+    vertical-align: middle;
+    margin: 0px 0px 0px 0px;
+    line-height: 60px;
+    font-size: 40px;
+}
+.carusel{
+    margin: 20px 0px 0px 0px;
+}
+.envios{
+    color: rgba(0, 0, 0, 0.8);
+}
+.envios i{
+    font-size: 88px;
+}
+.elementos{
+    display: flex;
+}
+.envios{
+    text-align: center;
+}
+.elementos{
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+}
+.elementos{
+    gap: 20px;
+}
+.envios h3{
+    margin: 0px 0px 20px 0px;
+}
+.envios:hover{
+    color: rgba(0, 0, 0, 1);
+}
+hr{
+    color: #000000;
+    width: 100%;
+}
+@media (max-width: 500px){
+    .elementos{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.list{
+    gap: 20px;
+    justify-content: center;
+}
+footer{
+    
+}
+.elemento{
+    color: #000000;
+}
+.elemento a{
+    text-decoration: none;
+    color: #000000;
+}
+.indicador{
+    color: #000000;
+}
+.elemento p, .elemento i{
+    font-size: 12px;
+    color: #000000;
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.elemento i{
+    padding: 0px 10px 0px 0px;
+}
+.card .titulo{
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+}
+.elemento{
+    text-align: center;
+}
+.indicador p{
+    font-size: 12px;
+    text-align: center;
+}
+.final{
+    background-color: var(--container-color);
+    padding: 20px 0px 20px 0px;
+}
+.product-box{
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+.product-box img{
+    border: none;
+    border-radius: 0;
+}
+.product-box{
+    position: relative;
+}
+.product-box h3{
+    text-shadow: 2px 2px 4px #000 !important;
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.product-box a{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: #fff;
+    text-decoration: underline;
+}
+.product-box{
+    color: #ffffff;
+}
+.product-box:hover{
+    transform: scale(1);
+}
+.product-box:hover img{
+    opacity: 0.8;
+}
+.product-box:hover h3{
+    color: #fff;
+    opacity: 1;
+    z-index: 8;
+    bottom: 25px;
+}
+.product-box img{
+    transition: opacity 0.3s ease-in-out;
+}
+.product-box h3{
+    z-index: 8;
+    transition: all 0.3s ease-in-out;
+}
+.product-box:hover a{
+    transition: all 0.3s ease;
+    z-index: 8;
+    bottom: 15px;
+}
+.product-box a{
+    transition: all 0.3s ease;
+    z-index: 8;
+}
+.product-box{
+    cursor: pointer;
+}
+.carusel{
+    margin: 0px 0px 0px 0px;
+}
+.carusel{
+    margin: 80px 0px 40px 0px;
+    padding: 0px;
+}
+@media (max-width: 1100px){
+    .carusel{
+        margin: 72.5px 0px 40px 0px;
+    }
+}
+.img{
+    margin: 0px 10px 0px 10px;
+    padding: 20px 0px 20px 0px;
+}
+.card{
+    padding: 0px 0px 0px 0px;
+}
+h2{
+    text-align: center;
+}
+.final p{
+    color: #ffffff;
+}
+.final i{
+    color: #ffffff;
+}
+.final .titulo{
+    color: #ffffff;
+    font-weight: 600;
+}
+.elemento{
+    gap: 20px 0px;
+}
+.section-title{
+    margin: 0px 0px 20px 0px;
+}
+section{
+    padding: 20px 0px 20px 0px;
+}
+.card{
+    height: 100%;
+}
+.list{
+    align-items: center;
+}
+.central-politicas h1{
+    color: #000000;
+}
+.central-politicas p{
+    color: #000000;
+    text-align: justify;
+}
+.central-politicas{
+    margin: 100px 0px 0px 0px;
+}
+.central-politicas h2{
+    color: #000000;
+    text-align: justify;
+    font-size: 20px;
+    margin: 20px 0px 0px 0px;
+}
+.cards h2{
+    color: #000000;
+}
+
+.hero{
+    opacity: 1;
+    display: block;
+}
+.container-hero{
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+}
+.central{
+    margin: 10px 0px 0px 0px;
+}
+.logo-card{
+    font-size: 140px;
+    text-align: center;
+    color: var(--container-color);
+    margin: 20px 0px 0px 0px;
+}
+.shop-content{
+    
+}
+.shop-content{
+    margin: 0px 10px 0px 10px;
+}
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 20px;
+}

@@ -1,0 +1,129 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.hero{
+    height: 100%;
+}
+.claridad:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.ampliar{
+    height: 600px;
+}
+.eslogan{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.vision-mision{
+    text-align: justify;
+}
+.vision-mision .info h2{
+    text-align: center;
+}
+.contenedor-cards{
+    
+}
+.valores .info h2{
+    text-align: center;
+}
+.contenedor-cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.vision-mision h2{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.valores h2{
+    text-align: center;
+    font-size: 16px;
+}
+.card p{
+    text-align: justify;
+    font-size: 12px;
+}
+.card{
+    max-width: 400px;
+}
+@media (max-width: 768px){
+    .contenedor-cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        margin: auto;
+    }
+    .ampliar{
+        height: 400px;
+    }
+}
+@media(max-width: 600px){
+    .ampliar{
+        height: 300px;
+    }
+}
+.quienes-somos h1{
+    font-size: 26px;
+    text-align: center;
+}
+.quienes-somos p{
+    font-size: 12px;
+    text-align: justify;
+}
+.maps iframe{
+    position: static;
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+}
+.titulo{
+    font-size: 16px;
+    font-weight: 600;
+}
+.maps h1{
+    font-size: 36px;
+    text-align: center;
+}
+.maps{
+    margin: 40px 0px 40px 0px;
+}
+/*p, h1{
+    color: #000000;
+}*/
+.hero{
+    margin: 40px 0px 0px 0px;
+}
+.central p, h1{
+    color: #000000;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*align-items: center;*/
+}
+footer{
+    align-self: flex-end;
+    width: 100%;
+
+}

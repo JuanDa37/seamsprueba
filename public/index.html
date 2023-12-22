@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sea & Seams</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link rel="shortcut icon" href="img/lgo.jpg" type="image/x-icon">
+
+  
+  <link rel="stylesheet" href="css/tienda.css">
+  
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Box icons-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <!--Nav-->
+        <div class="nav container nav-bar">
+            <!--Logo-->
+            <i class='bx bx-menu sidebarOpen'></i>
+            <div class="logos">
+            <a href="/" class="logo navLogo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+            <div>
+                <p class="titulo">SEA & SEAMS</p>
+                <p class="slogan">Headway Clothing</p>
+            </div>
+            </div>
+            <div class="menu">
+                <div class="logo-togle">
+                    <a href="EspecificacionProdutco.html" class="logo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+                    <div>
+                        <p class="titulo">SEA & SEAMS</p>
+                        <p class="slogan">Headway Clothing</p>
+                    </div>
+                    <i class='bx bx-x sidebarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Inicio</a></li>
+                        <li class="submenu">
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                                <ul class="sub-menu dropdown-menu">
+                                    <li><a href="https://sea-seams-empresa.vercel.app/TiendaVestidos" class="dropdown-item">Vestidos</a></li>
+                                    <li><a href="tienda.html" class="dropdown-item">Camisas</a></li>
+                                    <li><a href="/TiendaZapatos" class="dropdown-item">Zapatos</a></li>
+                                                <li><a href="/tienda" class="dropdown-item">Conjuntos</a></li>
+                                                <li><a href="/TiendaAccesorios" class="dropdown-item">Accesorios</a></li>
+                                </ul>
+                            </div>
+                        </li></li>
+                    <li><a href="/Quienes-Somos">Nosotros</a></li>
+                    <li class="submenu">
+                        <div class="dropdown">
+                            <a href="servicios.html" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                            <ul class="sub-menu dropdown-menu">
+                                <li><a href="/servicios" class="dropdown-item">Vender</a></li>
+                                <li><a href="/servicios" class="dropdown-item">Comprar</a></li>
+                                <li><a href="/servicios" class="dropdown-item">Cambiar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Agendar Cita</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <!--<div class="darkLight">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>-->
+                <!--<div class="searchBox">
+                    <div class="searchTogle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+
+                        <div class="search-field">
+                            <input type="text" placeholder="...Search">
+                            <i class='bx bx-search'></i>
+                        </div>
+
+                </div>
+                </div>-->
+                <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            </div>
+            <!--Cart Icon-->
+            <div class="cart">
+                <h2 class="cart-title">Your cart</h2>
+                <!--Content-->
+                <div class="cart-content cart-content-scroll">
+                </div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">0$</div>
+                </div>
+                <!--Buy button-->
+                <button type="button" class="btn-button">Buy now</button>
+                <!--Close cart-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <!--Products-->
+
+    <section class="carusel">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/BANNER-HOME-CREDI10-26082023-LG-2.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/BANNER-HOME-LINEN-BLOOM-LG.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/BANNER-HOME-MERCHAND-NOIR-BAG-02112023-LG.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon">
+                <i class='bx bx-chevron-left' ></i>
+            </span>
+            </a>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon">
+                    <i class='bx bx-chevron-right' ></i>
+                </span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+          </div>
+    </section>
+
+    <section class="shop">
+        <h2 class="section-title">Categorias</h2>
+        <!--Shop Content-->
+        <div class="shop-content">
+            <!--Box 1-->
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <h3>Conjuntos</h3>
+                <a href="/tienda"><p>Ver todo</p></a>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUWM_iHd7TKa-VD2h7OATlh7Om0At50gCrl-pmIS_r50rKz7z7Sf7PR6qM1pKGFcXxvrXxWjOkYW2eakW0oZo4t4xt2U8BMDV-VNFfAhfyZggpyi6nRVsyvavSE35B7-ePoxxBhdglkinN17j2upFiIwjJegp8aVJKB_xUnb5WRsNIdrYSKvMhxiSVYJGc/s320/WhatsApp%20Image%202023-09-23%20at%209.54.36%20PM.jpeg" alt="" class="product-img">
+            </div>
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <h3>Camisas</h3>
+                <a href="/TiendaCamisas"><p>Ver todo</p></a>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6JiGiGwxgpqFQN6HN5Ze-Qg1YIUTJlkuT1E2J-QNhQWE_UPyAcxqO1zNoGV_9YRCrGTgcr3OjSVW5c1YqBqWK8_AjC7EQGzHFiKfFCu6RTvCHEEg0W8leWZez_SWxH_sR3CC0asHYi50gBebTgTlLSDaARBY0Uza4CwaXq9OPXBHTEu3d4nLlxJEmGaKj/s320/WhatsApp%20Image%202023-09-23%20at%209.53.38%20PM%20(4).jpeg" alt="" class="product-img">
+            </div>
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <h3>Zapatos</h3>
+                <a href="/TiendaZapatos"><p>Ver todo</p></a>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEir4-kWfzmAh86ufux5b8D_m5RB9mJaS2-lzDgxHO2ji3lS6CANYDnnDIUcTLRDk2bGwUEvOxIMaVt3utaGZsgmuMMPN8PYlVHA9vk9_qaFxlbcKjOVnYztrn0fBvEsO-lC5Q6fSFdVtEslJoNR2KF_x3dJ6pow2jUQhU0ZVSyZ0QP2zZaekE9en7HjIavi/s320/WhatsApp%20Image%202023-09-23%20at%209.53.44%20PM.jpeg" alt="" class="product-img">
+            </div>
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <h3>Vestidos</h3>
+                <a href="/TiendaVestiodos"><p>ver todo</p></a>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMreKrD0i3fuX5bpETWrezZXXuF0KaQiia1ncky5JYHKQ4WVLw8fapHXSMJIFiG2l0yfXU0ObK9IUl8sPxMhKuALt6FrQ0TfLh-ZIOtF1kAzVtZGiFEG_JUPOqAgaZjT0guJZ4tggArtd2PCWm72KMqa28rXFG2IwK-_FfYmnLcbe_sL6NfUqBgSfV9mbk/s320/WhatsApp%20Image%202023-09-23%20at%209.53.30%20PM%20(5).jpeg" alt="" class="product-img">
+            </div>
+            <div class="product-box">
+                <!--Stripe need images that are on online on local serverit will not show in stripe ccheckout we have to upload online-->
+                <h3>Accessorios</h3>
+                <a href="/TiendaAccesorios"><p>ver todo</p></a>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-ZCy__iMV7fqwY9HLoo4zkXQK4mb9qRMsPNP7bM9mYEB0Ik2OPtk2NLYas8hnyRjQG9YcJE0HoURzg9GA9OrAGt6sH0-jLtGKCI_pjrwOiwetIbkI-A7pZ6fWkcCskJ1ennkwpoyjXMJ5AzuNaICz4DIqjVSPh8G-fjcghQkv2P10magXrd9WimvdogRQ/s320/WhatsApp%20Image%202023-09-23%20at%209.53.46%20PM.jpeg" alt="" class="product-img">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="envios">
+                <h3>Nos encargamos de darle nuevas oportunidades a prendas en perfectas condiciones generales</h3>
+                <div class="elementos">
+                    
+                    <div class="items">
+                        <i class='bx bx-time'></i>
+                        <p>Servicio al cliente las 24 horas</p>
+                </div>
+                <div class="items">
+                    <i class='bx bxs-plane-land'></i>
+                    <p>Envío nacionales gratuitos</p>
+                </div>
+                <div class="items">
+                    <i class='bx bx-user'></i>
+                    <p>Atención personalizada virtual</p>
+                </div>
+                
+            </div>
+            <hr>
+        </div>
+    </div>
+        
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="cards">
+                <div class="row list">
+                    <h2>Servicios</h2>
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/vende.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Vende tus prendas</h5>
+                            <a href="#" class="btn btn-primary d-grid grid-gap">Ir</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/truequear.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Truequea tus prendas</h5>
+                            <a href="#" class="btn btn-primary d-grid grid-gap">Ir</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/comprar.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Alquiler de prendas</h5>
+                            <a href="#" class="btn btn-primary d-grid grid-gap">Ir</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        <div class="final">
+            <div class="container">
+                <div class="row elemento">  
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <p class="titulo">Visita nuestras redes sociales</p>
+                        <div class="redes">
+                            <a href="https://www.facebook.com/profile.php?id=100083532272187">
+                                <i class='bx bxl-facebook' ></i>
+                            </a>
+                            <p>Sea & Seams</p>
+                        </div>
+                        <div class="redes">
+                            <a href="https://www.instagram.com/seaams/">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                            <p>Sea & Seams</p>
+                        </div>
+                        <div class="redes">
+                            <a href="https://www.youtube.com/channel/UC0WSKg812tMljiGuQqHdwzA?view_as=subscriber">
+                                <i class='bx bxl-youtube'></i>
+                            </a>
+                            <p>Sea & Seams</p>
+                        </div>
+                        <div class="redes">
+                            <a href="">
+                                <i class='bx bxl-whatsapp'></i>
+                            </a>
+                            <p>318 3168 27293</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 col-md-3 col-xl-3">
+                        <p class="titulo">Políticas</p>
+                        <a href="/Politica-De-Privacidad"><p>Política de privacidad</p></a>
+                        <a href="/Politica-De-Envios"><p>Política de envios</p></a>
+                        <a href="/Politica-De-Devoluciones"><p>Política de devolución</p></a>
+                        <a href="/Politica-De-Garantia"><p>Política de garantia</p></a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <p class="titulo">Horario de atención</p>
+                        <p>Ciita previa al teléfono</p>
+                        <p>(+57) 318 525 8389</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                        <p class="titulo">Dirección</p>
+                        <p>Cra. 17 B1 # 57 - 70</p>
+                        <p>Puerta del sol, Bucaramanga Santander</p>
+                    </div>
+                </div>
+                <div class="row indicador">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <hr>
+                        <p>@Copyright sea-seams. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/dinamic.js"></script>
+
+    <script src="js/carro.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

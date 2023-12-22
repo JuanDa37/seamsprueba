@@ -1,0 +1,182 @@
+img{
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+.containe-imagen{
+}
+.comprar{
+    position: relative;
+    text-align: right;
+}
+.lightbox .add-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ligthbox .add-cart{
+    border-radius: 0;
+    gap: 10px;
+    width: 70%;
+    border-radius: 10px;
+    font-size: 14px;
+    position: static;
+    text-align: center;
+    margin: auto;
+}
+.add-cart p{
+    margin: 0;
+}
+.center{
+    align-items: center;
+}
+h2{
+    font-size: 26px;
+}
+.container2 .utilidad p{
+    font-size: 12px;
+}
+.container2{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.menu2  {
+    width: 100%;
+    background-color: var(--bg-color);
+}
+ul{
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+}
+.list{
+    width: 100%;
+    list-style: none;
+    height: 30px;
+    border-bottom: 1px solid #433d3dbe;
+    transition: 0.7s;
+    overflow: hidden;
+    font-size: 14px;
+}
+.container2 .menu2 .item2{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    color: #fff;
+    cursor: pointer;
+}
+.list a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #000;
+}
+.list i{
+    margin-right: 10px;
+}
+.list .icon{
+    transition: 0.3s;
+    color: #000;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+.list p{
+    padding: 10px;
+    color: #000;
+    font-size: 14px;
+}
+.scale{
+    height: 100px;
+    overflow: hidden;
+    transition: height 0.6s ease;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.head{
+    background: #0f9ad1;
+}
+.paginas{
+    margin: 20px 0px 0px 0px;
+}
+.container2.active{
+    font-size: 16px;
+    color: #000000;
+    background: #ffffff;
+    width: 120px;
+    text-align: center;
+    padding: 2px;
+    vertical-align: middle;
+    border-radius: 4px 4px 0px 0px;
+    border-top:  1px  solid rgba(0, 0, 0, 0.4);
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+li,ul{
+    margin: 0;
+}
+.instagram hr{
+    width: 100%;
+    margin: 0;
+    color: #000;
+}
+.active p{
+    margin: 0;
+}
+.container2 p{
+    color: #000;
+    font-size: 16px;
+}
+.utilidad h2{
+    font-size: 20px;
+    color: #000000;
+    margin: 0px 0px 10px 0px;
+    font-weight: 600;
+}
+.add-cart{
+    margin: 20px 0px 20px 0px;
+    text-align: left;
+}
+.add-cart p{
+    color: #ffffff !important;
+}
+div .add-cart:hover{
+    color: #ffffff !important;
+}
+.utilidad{
+    color: #000000;
+}
+.container-imagen img{
+    margin: auto;
+}
+.center{
+    margin: 100px 0px 0px 0px;
+}
+.instagram{
+    margin: 20px 0px 20px 0px;
+    color: #000000;
+    font-size: 12px;
+}
+.paginas{
+    background: var(--container-color);
+    color: #ffffff;
+    width: 80px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 4px 4px 0px 0px;
+}
+.item2.clicked{
+    transition: all 0.6s ease;
+    background-color: var(--text-color);
+    color: white;
+}
+.item2.clicked a{
+    color: #ffffff;
+}
+.item2.clicked i{
+    color: #ffffff;
+}

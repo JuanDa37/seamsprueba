@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="stylesheet" href="css/EspecificacionesProductos.css">
+    <link rel="stylesheet" href="css/servicios.css">
+    <link rel="shortcut icon" href="img/lgo.jpg" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <!--Nav-->
+    <div class="nav container nav-bar">
+        <!--Logo-->
+        <i class='bx bx-menu sidebarOpen'></i>
+        <div class="logos">
+        <a href="/" class="logo navLogo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+        <div>
+            <p class="titulo">SEA & SEAMS</p>
+            <p class="slogan">Headway Clothing</p>
+        </div>
+        </div>
+        <div class="menu">
+            <div class="logo-togle">
+                <a href="/" class="logo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+                <div>
+                    <p class="titulo">SEA & SEAMS</p>
+                    <p class="slogan">Headway Clothing</p>
+                </div>
+                <i class='bx bx-x sidebarClose'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                    <li class="submenu">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                            <ul class="sub-menu dropdown-menu">
+                                <li><a href="/TiendaVestidos" class="dropdown-item">Vestidos</a></li>
+                                <li><a href="/TiendaCamisas" class="dropdown-item">Camisas</a></li>
+                                <li><a href="/TiendaZapatos" class="dropdown-item">Zapatos</a></li>
+                                            <li><a href="/tienda" class="dropdown-item">Conjuntos</a></li>
+                                            <li><a href="/TiendaAccesorios" class="dropdown-item">Accesorios</a></li>
+                            </ul>
+                        </div>
+                    </li></li>
+                <li><a href="/Quienes-Somos">Nosotros</a></li>
+                <li class="submenu">
+                    <div class="dropdown">
+                        <a href="servicios.html" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        <ul class="sub-menu dropdown-menu">
+                            <li><a href="/servicios" class="dropdown-item">Vender</a></li>
+                            <li><a href="/servicios" class="dropdown-item">Comprar</a></li>
+                            <li><a href="/servicios" class="dropdown-item">Cambiar</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="https://api.whatsapp.com/send?phone=573185258389&text=Hola%20solicito%20programar%20una%20cita">Agendar Cita</a></li>
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <!--<div class="darkLight">
+                <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i>
+            </div>-->
+            <!--<div class="searchBox">
+                <div class="searchTogle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="...Search">
+                        <i class='bx bx-search'></i>
+                    </div>
+
+            </div>
+            </div>-->
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+        </div>
+        <!--Cart Icon-->
+        <div class="cart">
+            <h2 class="cart-title">Your cart</h2>
+            <!--Content-->
+            <div class="cart-content cart-content-scroll">
+            </div>
+            <!--Total-->
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">0$</div>
+            </div>
+            <!--Buy button-->
+            <button type="button" class="btn-button">Buy now</button>
+            <!--Close cart-->
+            <i class='bx bx-x' id="close-cart"></i>
+        </div>
+    </div>
+</header>
+  <div>
+    <img src="" alt="" />
+  </div>
+  <div>
+    <main>
+      <div class="container">
+        <div class="servs">
+          <div class="central">
+            <div class="inicio">
+              <h2>VENDE TUS PRENDAS</h2>
+              <p>
+                En Sea & Seams vendemos la ropa que ya no usas para darle una segunda
+                oportunidad en el closet de otra persona. Queremos crear armarios
+                circulares entre todas y así poder frenar las devastadoras consecuencias
+                del fast-fashion.
+              </p>
+            </div>
+            <h3>Sigue estos 4 sencillos pasos</h3>
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <img src="img/vende.png" alt="" />
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="container2" id="container2">
+                  <div class="menu2">
+                    <ul>
+                    <li class="list">
+                      <div class="item">
+                        <div>Limpieza Profunda de tu Closeth</div>
+                        <i class='bx bx-chevron-up'></i>
+                      </div>
+                      <p>Realiza un detox o limpieza profunda de tu closet revisando que prendas no has usado por mucho
+                        tiempo y ves que no tienen más oportunidad en tu día a día, prendas que ya no son de tu talla
+                        actual, prendas que hayas recibido como obsequios y no sean de tu talla o estilo, en fin, todas
+                        las prendas que merecen una segunda oportunidad.</p>
+                      </li>
+                      <li class="list">
+                        <div class="item">
+                          <div>Correo Electrónico</div>
+                          <i class='bx bx-chevron-up'></i>
+                        </div>
+                      </li>
+                      <li class="list">
+                        <div class="item">
+                          <div>Notificar</div>
+                        <i class='bx bx-chevron-up'></i>
+                      </div>
+                      <p>Notificarnos cuando tengas el paquete listo en tu casa para programar la
+                        recogida del mismo. (En caso de que te encuentres ubicada fuera de Bucaramanga o área
+                        metropolitana
+                        puedes acercarte a realizar el envío por cualquier empresa de transporte realizando el pago del
+                        mismo en la ciudad de origen).</p>
+                      </li>
+                    <li class="list">
+                      <div class="item">
+                        <div>Datos bancarios</div>
+                        <i class='bx bx-chevron-up'></i>
+                      </div>
+                      <p>Enviarnos el número de cuenta bancaria o cuenta nequi a la cual deseas que
+                        te efectuemos el pago de tus ventas. Cuando solicites la consignación de tu dinero según el
+                        día
+                        del mes que lo hayas pedido entrarás en el corte del 1 al 15 o del 16 al 30 según corresponda.
+                        El
+                        dinero que recibes por cada venta es el mismo valor que nos indicas en el formato, si se
+                        presenta
+                        algún caso donde tengamos una cliente que oferte por alguna de tus prendas por un valor
+                        inferior,
+                        antes de venderla te preguntaremos para que nos autorices a bajar el precio o bien, si no deseas
+                        bajar el precio, seguimos a la espera de una oferta mejor.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--<div class="container2" id="container2">
+                <div class="menu2">
+                <ul>
+                  <li class="list">
+                    <div class="item">
+                      <div></div>
+                      <i></i>
+                    </div>
+                    <p></p>
+                  </li>
+                </ul>
+              </div>
+            </div>-->
+            <div>
+              <div class="linear">
+                <div class="linear">
+                    <div class="card">
+                      <img src="img/aceptar.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">¿Qué vendemos?</h5>
+                        <p class="card-text">Ropa femenina en perfecto estado
+                          Vestidos de baño con muy poco uso, sin desgaste en el color, sin peladuras, sin motas
+                          Ropa deportiva sin olores
+                          El calzado deberá estar sin grietas en el material interno
+                          Los bolsos deben estar en buenas condiciones, los cierres deben cerrar, el interior limpio, correas no
+                          desgastadas
+                          Artículos de lujo como bolsos, gafas y zapatos, favor incluir la factura de compra para así poder
+                          garantizar
+                          su originalidad.</p>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img src="img/naceptar.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">¿Qué no vendemos?</h5>
+                        <p class="card-text">¿QUÉ NO VENDEMOS?
+                          Ropa de hombre ni de niñxs (de momento)
+                          Ropa interior (incluye medias y brasiers)
+                          Fajas o corsés
+                          Artículos replicas
+                          Ropa con notorio desgaste de color
+                          Ropa con abundante cantidad de motas</p>
+                        </div>
+                      </div>
+                      <div class="informacion">
+                        <p>Cada vez que realicemos la venta de una de tus prendas a través de WhatsApp te haremos la
+                          notificación y
+                          podrás elegir entre las siguientes opciones. En cada oportunidad puedes elegir la opción que desees.
+                        </p>
+                        <p>Elegir la prenda(s) correspondientes al valor de tu saldo a favor.
+                          Guardar tu dinero con nosotros para futuras compras o ahorro personal
+                          Utilizar el dinero para TRUEQUES
+                          Retirar el dinero.</p>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                    <div>
+                      <div class="servs">
+                        <h2>TRUEQUEA TUS PRENDAS</h2>
+                        <p>Cambia por otras las prendas que ya no 0usas y dale un nuevo aire a tu closet.</p>
+                        <h3>Sigue estos 4 sencillos pasos</h3>
+                <div class="row">
+                  <div class="col-12 col-sm-16 col-md-6 col-lg-6 col-xl-6">
+                    <img src="img/truequear.png" alt="">
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                  <div class="container2" id="container3">
+                    <div class="menu2">
+                      <ul>
+                        <li class="list">
+                          <div class="item">
+                            <div>Prepara las prendas</div>
+                            <i class='bx bx-chevron-up'></i>
+                          </div>
+                          <p>Prepara las prendas de tu closet que vas a truequear para esto puedes hacer un
+                            detox o limpieza profunda de tu closet revisando que prendas no has usado por mucho tiempo y
+                            ves que no
+                            tienen más oportunidad en tu día a día.</p>
+                          </li>
+                        <li class="list">
+                          <div class="item">
+                            <div>Agenda una cita</div>
+                            <i class='bx bx-chevron-up'></i>
+                          </div>
+                          <p>Agenda tu cita (Virtual o presencial) a través de nuestra línea de atención al
+                            318-5258389, esta cita es personalizada, únicamente tu y nuestra asesora encargada estarán
+                            en el almacén
+                            para que puedas probarte todas las prendas que desees, en caso de encontrarte fuera de
+                            Bucaramanga o su
+                            área metropolitana la cita la agendaremos de forma virtual por Video llamada y previamente
+                            te enviaremos
+                            el catálogo con las prendas disponibles.</p>
+                          </li>
+                          <li class="list">
+                          <div class="item">
+                            <div>Lleva las prendas</div>
+                            <i class='bx bx-chevron-up'></i>
+                          </div>
+                          <p>Lleva las prendas a nuestra cita, el número de prendas que te lleves puede ser menor,
+                            igual o mayor al número de prendas tuyas que nos entregues, esto dependerá del tipo de
+                            prenda así como de su estado, marca y calidad.</p>
+                          </li>
+                        <li class="list">
+                          <div class="item">
+                            <div>Envía tus prendas</div>
+                            <i class='bx bx-chevron-up'></i>
+                          </div>
+                          <p>En caso de que realicemos el trueque de manera virtual
+                            primero
+                            deberás enviarnos tus prendas a nuestro almacén con el costo de envío ya pago desde tu
+                            ciudad de
+                            origen,
+                            al recibirlas, realizaremos el envío hasta tu casa, de las prendas que hayas seleccionado en
+                            el
+                            trueque.</p>
+                          </li>
+                      </ul>
+                    </div>
+                    <div class="seccion">
+                        <p>El valor del servicio de trueque es $30.000 pesos, este valor lo cancelas en el almacén en el momento
+                          de
+                          la cita, en caso de ser virtual, lo cancelas antes de realizarte el envío.</p>
+                          <a href="" class="enviar">Agenda tu cita</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              </div>
+              <div class="servs">
+              <div class="row">
+                <h2>RENTA PRENDAS</h2>
+                <h3>Sigue estos 4 sencillos pasos</h3>
+                <div class="col-12 col-sm-6 colmd-6 col-xl-6 col-lg-6 col-xl-6">
+                  <img src="img/comprar.png" alt="">
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                  <h3></h3>
+                  <div class="container2" id="container4">
+                    <div class="menu2">
+                      <ul>
+                        <li class="list">
+                          <div class="item">
+                            <div>Seleccionar</div>
+                            <i class='bx bx-chevron-up'></i>
+                          </div>
+                          <p>Seleccionar la prenda que deseas rentar
+                            (Todas las categorías aplican)</p>
+                          </li>
+                          <li class="list">
+                            <div class="item">
+                              <div>Efectuar pago</div>
+                              <i class='bx bx-chevron-up'></i>
+                            </div>
+                            <p>Efectuar el pago de la totalidad de la prenda</p>
+                          </li>
+                          <li class="list">
+                              <div class="item">
+                                <div>retornar</div>
+                                <i class='bx bx-chevron-up'></i>
+                              </div>
+                              <p>Deberás retornar la prenda en los siguientes 5 días (Cuentan días no
+                                hábiles)Deberás retornar la prenda en los siguientes 5 días (Cuentan días no
+                                hábiles)</p>
+                            </li>
+                            <li class="list">
+                              <div class="item">
+                                <div>Reintegro de depósito</div>
+                                <i class='bx bx-chevron-up'></i>
+                              </div>
+                              <p>Al recibir nosotros de nuevo la prenda y verificar que se
+                                encuentre en las mismas condiciones en que fue enviada efectuaremos la devolución del
+                                65% del valor
+                                total</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+            <div>
+              <div>
+                <div class="asesorar">
+                  <h2>Asesorias de imagen</h2>
+                  <div class="servs">  
+                    <div class="row central-asesorar">
+                      <div class="col-12 col-sm-6 col-md-8 col-lg-8 col-xl-8">
+                        <img src="img/asesorar.png" alt="">
+                      </div>
+                      <div  class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                        <h3>Solicita tu Asesoria de imagen</h3>
+                        <p>Escribenos y erserva tu cita, te atenderemos de forma virtual o presencial.</p>
+                        <a class="enviar" href=""><div>Ir</div></a>
+                      </div>
+                    </div>
+                  </div>
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </main>
+        
+        <footer class="conatiner-fluid">
+          <div class="final">
+              <div class="container">
+                  <div class="row elemento">  
+                      <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                          <p class="titulo">Visita nuestras redes sociales</p>
+                          <div class="redes">
+                              <a href="https://www.facebook.com/profile.php?id=100083532272187">
+                                  <i class='bx bxl-facebook' ></i>
+                              </a>
+                              <p>Sea & Seams</p>
+                          </div>
+                          <div class="redes">
+                              <a href="https://www.instagram.com/seaams/">
+                                  <i class='bx bxl-instagram'></i>
+                              </a>
+                              <p>Sea & Seams</p>
+                          </div>
+                          <div class="redes">
+                              <a href="https://www.youtube.com/channel/UC0WSKg812tMljiGuQqHdwzA?view_as=subscriber">
+                                  <i class='bx bxl-youtube'></i>
+                              </a>
+                              <p>Sea & Seams</p>
+                          </div>
+                          <div class="redes">
+                              <a href="">
+                                  <i class='bx bxl-whatsapp'></i>
+                              </a>
+                              <p>318 3168 27293</p>
+                          </div>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-3 col-md-3 col-xl-3">
+                          <p class="titulo">Políticas</p>
+                          <a href="/Politica-De-Privacidad"><p>Política de privacidad</p></a>
+                          <a href="/Politica-De-Envios"><p>Política de envios</p></a>
+                          <a href="/Politica-De-Devoluciones"><p>Política de devolución</p></a>
+                          <a href="/Politica-De-Garantia"><p>Política de garantia</p></a>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                          <p class="titulo">Horario de atención</p>
+                          <p>Ciita previa al teléfono</p>
+                          <p>(+57) 318 525 8389</p>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                          <p class="titulo">Dirección</p>
+                          <p>Cra. 17 B1 # 57 - 70</p>
+                          <p>Puerta del sol, Bucaramanga Santander</p>
+                      </div>
+                  </div>
+                  <div class="row indicador">
+                      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                          <hr>
+                          <p>@Copyright sea-seams. Todos los derechos reservados.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+    
+    <script src="js/dinamic.js"></script>
+
+    <script src="js/servicios.js"></script>
+
+    <script src="js/cart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>

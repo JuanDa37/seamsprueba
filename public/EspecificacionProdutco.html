@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificaciones del producto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="stylesheet" href="css/EspecificacionesProductos.css">
+    <link rel="shortcut icon" href="img/lgo.jpg" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <!--Nav-->
+    <div class="nav container nav-bar">
+        <!--Logo-->
+        <i class='bx bx-menu sidebarOpen'></i>
+        <div class="logos">
+        <a href="/" class="logo navLogo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+        <div>
+            <p class="titulo">SEA & SEAMS</p>
+            <p class="slogan">Headway Clothing</p>
+        </div>
+        </div>
+        <div class="menu">
+            <div class="logo-togle">
+                <a href="/" class="logo"><img src="img/lgo-removebg-preview (1).png" alt=""></a>
+                <div>
+                    <p class="titulo">SEA & SEAMS</p>
+                    <p class="slogan">Headway Clothing</p>
+                </div>
+                <i class='bx bx-x sidebarClose'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                    <li class="submenu">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</a>
+                            <ul class="sub-menu dropdown-menu">
+                                <li><a href="/TiendaVestidos" class="dropdown-item">Vestidos</a></li>
+                                <li><a href="/TiendaCamisas" class="dropdown-item">Camisas</a></li>
+                                <li><a href="/TiendaZapatos" class="dropdown-item">Zapatos</a></li>
+                                            <li><a href="/tienda" class="dropdown-item">Conjuntos</a></li>
+                                            <li><a href="/TiendaAccesorios" class="dropdown-item">Accesorios</a></li>
+                            </ul>
+                        </div>
+                    </li></li>
+                <li><a href="/Quienes-Somos">Nosotros</a></li>
+                <li class="submenu">
+                    <div class="dropdown">
+                        <a href="servicios.html" class="dropdown-toggle " role="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios</a>
+                        <ul class="sub-menu dropdown-menu">
+                            <li><a href="/servicios" class="dropdown-item">Vender</a></li>
+                            <li><a href="/servicios" class="dropdown-item">Comprar</a></li>
+                            <li><a href="/servicios" class="dropdown-item">Cambiar</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">Agendar Cita</a></li>
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <!--<div class="darkLight">
+                <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i>
+            </div>-->
+            <!--<div class="searchBox">
+                <div class="searchTogle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="...Search">
+                        <i class='bx bx-search'></i>
+                    </div>
+
+            </div>
+            </div>-->
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+        </div>
+        <!--Cart Icon-->
+        <div class="cart">
+            <h2 class="cart-title">Your cart</h2>
+            <!--Content-->
+            <div class="cart-content cart-content-scroll">
+            </div>
+            <!--Total-->
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">0$</div>
+            </div>
+            <!--Buy button-->
+            <button type="button" class="btn-button">Buy now</button>
+            <!--Close cart-->
+            <i class='bx bx-x' id="close-cart"></i>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container">
+            <div class="row center">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="container-imagen">
+                      <img class="product-img" src="img/conjuntoPantalonAcchoCamisaEleganteNegro.jpg" alt="" class="shadow border rounded-2">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                  <div class="utilidad">
+                      <h2 class="product-title">Conjunto Pantalon Ancho</h2>
+                      <p class="price">$25.0000</p>
+                      <p>Conjuntos</p>
+                      <p>Descripción</p>
+                          <div class="add-cart">
+                            <p>Añadir al carrito</p>
+                            <i class='bx bx-shopping-bag'></i>
+                      </div>
+                    </div>
+                    <div>
+                      <hr>
+                    </div>
+                    <div id="container2" class="container2">
+                      <nav class="menu2">
+                        <ul>
+                          <li class="list">
+                            <div class="item2">
+                              <a href="#"><i></i>Color</a>
+                              <i class='bx bx-chevron-up icon' ></i>
+                            </div>
+                            <p>Azúl Oscuro</p>
+                          </li>
+                          <li class="list">
+                            <div class="item2">
+                              <a href="#"><i></i>Talla</a>
+                              <i class='bx bx-chevron-up icon' ></i>
+                            </div>
+                            <p>XL</p>
+                          </li>
+                          <li class="list">
+                            <div class="item2">
+                              <a href="#"><i></i>Medidas</a>
+                              <i class='bx bx-chevron-up icon' ></i>
+                            </div>
+                            <p>Sin información</p>
+                          </li>
+                          <li class="list">
+                            <div class="item2">
+                              <a href="#"><i></i>Acerca de este producto</a>
+                              <i class='bx bx-chevron-up icon' ></i>
+                            </div>
+                            <p>Sin información</p>
+                          </li>
+                          <li class="list">
+                            <div class="item2">
+                              <a href="#"><i></i>Marca</a>
+                              <i class='bx bx-chevron-up icon' ></i>
+                            </div>
+                            <p>Sin información</p>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="instagram">
+                      <ul class="paginas">
+                        <li class="active">
+                          <p>Ofertas</p>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                      <hr>
+                      <p>Recibe un 5% de descuento realizando tu compra directamente en instagram (@seeams) o en WhatsApp (+57 316 041 6781)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+
+            <footer>
+              <div class="final">
+                  <div class="container">
+                      <div class="row elemento">  
+                          <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                              <p class="titulo">Visita nuestras redes sociales</p>
+                              <div class="redes">
+                                  <a href="https://www.facebook.com/profile.php?id=100083532272187">
+                                      <i class='bx bxl-facebook' ></i>
+                                  </a>
+                                  <p>Sea & Seams</p>
+                              </div>
+                              <div class="redes">
+                                  <a href="https://www.instagram.com/seaams/">
+                                      <i class='bx bxl-instagram'></i>
+                                  </a>
+                                  <p>Sea & Seams</p>
+                              </div>
+                              <div class="redes">
+                                  <a href="https://www.youtube.com/channel/UC0WSKg812tMljiGuQqHdwzA?view_as=subscriber">
+                                      <i class='bx bxl-youtube'></i>
+                                  </a>
+                                  <p>Sea & Seams</p>
+                              </div>
+                              <div class="redes">
+                                  <a href="">
+                                      <i class='bx bxl-whatsapp'></i>
+                                  </a>
+                                  <p>318 3168 27293</p>
+                              </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-3 col-md-3 col-xl-3">
+                              <p class="titulo">Políticas</p>
+                              <a href="/Politica-De-Privacidad"><p>Política de privacidad</p></a>
+                              <a href="/Politica-De-Envios"><p>Política de envios</p></a>
+                              <a href="/Politica-De-Devoluciones"><p>Política de devolución</p></a>
+                              <a href="/Politica-De-Garantia"><p>Política de garantia</p></a>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                              <p class="titulo">Horario de atención</p>
+                              <p>Ciita previa al teléfono</p>
+                              <p>(+57) 318 525 8389</p>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                              <p class="titulo">Dirección</p>
+                              <p>Cra. 17 B1 # 57 - 70</p>
+                              <p>Puerta del sol, Bucaramanga Santander</p>
+                          </div>
+                      </div>
+                      <div class="row indicador">
+                          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                              <hr>
+                              <p>@Copyright sea-seams. Todos los derechos reservados.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+
+            </script>
+            <script src="js/EspecificacionesProdutco.js"></script>
+            <script src="js/cart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
