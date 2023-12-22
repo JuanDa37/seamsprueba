@@ -1,16 +1,11 @@
-import express from 'express';
+const express = require('express');
 
-import dotenv from "dotenv";
-
-import stripe from "stripe";
-
-import path from 'path';
-
-import morgan from 'morgan';
-
-import mysql from 'mysql';
-
-import myConnection from 'express-myconnection';
+const dotenv = require('dotenv');
+const stripe = require('stripe');
+const path = require('path');
+const morgan = require('morgan');
+const mysql = require('mysql');
+const myConnection = require('express-myconnection');
 
 
 const app = express();
