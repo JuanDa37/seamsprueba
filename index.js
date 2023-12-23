@@ -41,6 +41,101 @@ app.get("/servicios", (res, req) => {
     });
 })
 
+//EspecificacionProdutco
+
+app.get("/EspecificacionProdutco", (res, req) => {
+    req.sendFile("EspecificacionProdutco.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//Quienes-somos
+
+app.get("/Quienes-Somos", (res, req) => {
+    req.sendFile("Quienes-Somos.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//PolíticaDePrivacidad
+
+app.get("/Politica-De-Privacidad", (res, req) => {
+    req.sendFile("PoliticaDePrivacidad.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//PoliticaDeEnvios
+
+app.get("/Politica-De-Envios", (res, req) => {
+    req.sendFile("PoliticaDeEnvios.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//PoliticaDeGarantia
+
+app.get("/Politica-De-Garantia", (res, req) => {
+    req.sendFile("PoliticaDeGarantia.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//PoliticaDeDevoluciones
+
+app.get("/Politica-De-Devoluciones", (res, req) => {
+    req.sendFile("PoliticaDeDevoluciones.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//TiendaVestidos
+
+app.get("/TiendaVestidos", (res, req) => {
+    req.sendFile("TiendaVestidos.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//TiendaCamisas
+
+app.get("/TiendaCamisas", (res, req) => {
+    req.sendFile("TiendaCamisa.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//TiendaAccesorios
+
+app.get("/TiendaAccesorios", (res, req) => {
+    req.sendFile("TiendaAccesorios.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//TiendaZapatos
+
+app.get("/TiendaZapatos", (res, req) => {
+    req.sendFile("TiendaZapatos.html", {
+        root: path.join(__dirname, 'public')
+    });
+})
+
+//Success
+
+app.get("/success", (req, res) => {
+    res.sendFile("success.html", {
+        root: path.join(__dirname, 'public')
+    });
+});
+
+//Cancel
+app.get("/cancel", (req, res) => {
+    res.sendFile("cancel.html", {
+        root: path.join(__dirname, 'public')
+    });
+});
+
 app.get("/hola", (req, res) => {
     const htmlResponse = `
     <html>
